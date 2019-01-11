@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Générateur de citations</title>
+</head>
+
+<body>
+	<form id="formulaire_citation" onsubmit="return !!(verifTypeCitation() & verifNbCitation() & displayReponse() & setTimeout(relauchGenerator, 5000))">
+		
+	        <h2>Choisissez votre type de citations : </h2>
+	        <input type="radio" name="typeCitation" id="citationsIntelligentes" value="citationsIntelligentes">
+	        <label for="citationsIntelligentes">Intelligentes</label>
+	        <br/>
+	        <input type="radio" name="typeCitation" id="citationsRetard" value="citationsRetard">
+	        <label for="citationsRetard">Excuses de retard</label>
+	        <br/>
+	        <span id="aideTypeCitation"></span>
+	  
+
+	    	<h2>Sélectionnez un nombre de citation à générer</h2>
+	        <label for="nbCitations">Nombre de citations :</label>
+	        <select name="nbCitations" id="nbCitations">
+	            <option value="0" selected>Nb citation</option>
+	            <option value="1">1 citation</option>
+	            <option value="2">2 citations</option>
+	            <option value="3">3 citations</option>
+	            <option value="4">4 citations</option>
+	            <option value="5">5 citations </option>
+	        </select>
+	        <span id="aideNbCitation"></span>
+		<br/><br/>
+		<input type="submit" value="Submit">
+        <input type="reset" value="Annuler">
+	    <br/>
+	    <span id="aide_champs_manquants"></span>
+	</form>
+	
+	<br/>
+	<div id="resultat_citations"></div>
+	    
+  	<script src="js/generateurCitation.js"></script>    
+    
+</body>
+
+</html>
